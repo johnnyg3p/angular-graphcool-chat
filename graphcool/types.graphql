@@ -1,0 +1,10 @@
+
+
+type User @model {
+  id: ID! @isUnique
+  name: String!
+  email: String!  
+}
+
+
+
