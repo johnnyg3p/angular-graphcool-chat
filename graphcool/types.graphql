@@ -5,28 +5,28 @@ type User @model {
   name: String!
   email: String! @isUnique
   password: String!
-  createdAt: DateTime!  
+  createdAt: DateTime!
   updatedAt: DateTime!  
   chats: [Chat!]! @relation(name: "UsersOnChats")
   messages: [Message!]! @relation(name:"MessagesOnUser")
   photo: File @relation(name: "UserPhoto")
 }
 
-type chat @model {
+type Chat @model {
   id: ID! @isUnique
   title: String
   isGroup: Boolean! @defaultValue(value:"false")
-  createdAt: DateTime!  
-  updatedAt: DateTime! 
+  createdAt: DateTime!
+  updatedAt: DateTime!
   users:[User!]! @relation(name: "UsersOnChats")
   messages: [Message!]! @relation(name: "MessagesOnChat")
   photo: File @relation(name: "ChatPhoto")
 }
 
-type message @model{
+type Message @model{
   id: ID! @isUnique
   text: String!
-  createdAt: DateTime
+  createdAt: DateTime!
   sender: User! @relation(name:"MessagesOnUser")
   chat: Chat! @relation(name: "MessagesOnChat")  
 }
