@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api: 'https://api.graph.cool/simple/v1/cjs605yfp2bfe0114b9g7pdyv'
 };
 
 /*
