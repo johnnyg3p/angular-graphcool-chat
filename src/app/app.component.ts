@@ -14,8 +14,8 @@ export class AppComponent {
   constructor(
     private apollo: Apollo
   ) {
-    this.allUsers();
-    this.createUser();
+    // this.allUsers();
+    // this.createUser();
   }
 
   allUsers(): void {
